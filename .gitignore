@@ -228,3 +228,4 @@ Thumbs.db #thumbnail cache on Windows
 
 .DS_Store
 migrations/
+.vscode/

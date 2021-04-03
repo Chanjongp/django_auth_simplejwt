@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+from datetime import timedelta
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,14 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    #myapp
+    # myapp
     'accounts',
-    #django-rest-auth
+    # django-rest-auth
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'dj_rest_auth',
     'dj_rest_auth.registration',
-    #django-allauth
+    # django-allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -91,16 +92,15 @@ WSGI_APPLICATION = 'practice.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default' : {
-        'ENGINE': 'django.db.backends.mysql',    
-        'NAME': 'practice',  
-        'PASSWORD' : 'ckswhd123~',                   
-        'USER': 'root',                                          
-        'HOST': 'localhost',                     
-        'PORT': '3306',                         
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'practice',
+        'PASSWORD': 'ckswhd123~',
+        'USER': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
-
 
 
 # Password validation
@@ -162,7 +162,6 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 REST_USE_JWT = True
 
-from datetime import timedelta
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(hours=2),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
